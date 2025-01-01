@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply scroll-smooth font-poppins bg-white text-neutral-900
+    }
+}
+
+@layer components {
+    .transition-smooth {
+        @apply duration-150 transition-all ease-in-out
+    }
+
+    .button-primary {
+        @apply bg-primary-500 hover:bg-primary-600 transition-smooth text-white px-4 py-3 rounded-md font-medium
+    }
+}
