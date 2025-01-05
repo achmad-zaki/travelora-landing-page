@@ -11,10 +11,10 @@ const handleCloseSidebar = () => {
 }
 
 // filter
-const handleFilter = () => {
-    let destinationInput = document.getElementById('destination')
-    if (destinationInput) {
+// const handleFilter = () => {
+//     let destinationInput = document.getElementById('destination')
+//     if (destinationInput) {
 
-        destinationInput.value
-    }
-}
+//         destinationInput.value
+//     }
+// }
