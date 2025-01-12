@@ -11,13 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Travel Landing Page</title>
 </head>
 
 <body>
     <aside id="sidebar"
-        class="fixed lg:hidden right-0 z-50 h-screen w-1/2 md:w-1/3 bg-white border-l border-gray-200 shadow-xl translate-x-full transition-all duration-300 delay-75">
-        <div class="relative p-5 flex flex-col items-center h-full font-medium justify-between">
+        class="fixed lg:hidden right-0 w-4/6 md:w-1/3 z-50 h-screen bg-white border-l border-gray-200 shadow-xl p-4 translate-x-full transition-smooth">
+        <div class="relative flex flex-col items-center h-full font-medium justify-between">
             <button onclick="handleCloseSidebar()"
                 class="absolute left-3 top-3 bg-primary-500 p-2 rounded-md hover:bg-primary-600 transition-smooth">
                 <img src="/src/assets/icons/close.svg" alt="Close">
@@ -100,8 +101,8 @@
                     <label for="check_in" class="block font-medium text-gray-500 text-sm">Check - in</label>
                     <div class="relative">
                         <input name="check_in" type="date" id="check_in"
-                            class="pl-9 placeholder:text-sm bg-gray-50 pr-5 border border-gray-200 rounded-full h-11 w-full outline-none focus:ring focus:ring-primary-300"
-                            placeholder="Search ...">
+                            class="text-sm pl-9 placeholder:text-sm bg-gray-50 pr-5 border border-gray-200 rounded-full h-11 w-full outline-none focus:ring focus:ring-primary-300"
+                            placeholder="Select date ...">
                         <div class="absolute inset-y-0 flex items-center">
                             <img src="/src/assets/icons/calendar.svg" class="ml-3 size-[18px]" alt="Location">
                         </div>
@@ -112,7 +113,7 @@
                     <div class="relative">
                         <input name="check_out" type="date" id="check_out"
                             class="pl-9 placeholder:text-sm bg-gray-50 pr-5 border border-gray-200 rounded-full h-11 w-full outline-none focus:ring focus:ring-primary-300"
-                            placeholder="Search ...">
+                            placeholder="Select date ...">
                         <div class="absolute inset-y-0 flex items-center">
                             <img src="/src/assets/icons/calendar.svg" class="ml-3 size-[18px]" alt="Location">
                         </div>
@@ -123,8 +124,8 @@
                     <div class="relative">
                         <select name="room_guest" id="room_guest"
                             class="pl-9 placeholder:text-sm bg-gray-50 pr-9 border border-gray-200 rounded-full h-11 w-full outline-none focus:ring focus:ring-primary-300 appearance-none">
-                            <option selected disabled>Select</option>
-                            <option value="1" class="">1 Room, 2 Guest</option>
+                            <option selected disabled class="text-sm">Select</option>
+                            <option value="1" class="text-sm">1 Room, 2 Guest</option>
                         </select>
                         <div class="absolute inset-y-0 flex items-center">
                             <img src="/src/assets/icons/users.svg" class="ml-3 size-[18px]" alt="Location">
@@ -144,12 +145,123 @@
 
     </section>
 
-    <section></section>
+    <section class="container" id="popular_place">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
+            <div class="text-center lg:text-start">
+                <h1 class="text-3xl font-semibold">Popular Place</h1>
+                <p class="mt-1 text-gray-600">Let's enjoy this heaven on earth.</p>
+            </div>
+            <div class="text-center lg:text-right lg:max-w-sm">
+                <p class="text-sm text-gray-600">All-inclusive vacations and flights to the Carribean, Indonesian, and
+                    more than 1,300
+                    destinations worldwide. Let's explore now.</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-8">
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/src/assets/images/singapore.jpg"
+                        class="w-full h-56 rounded-lg object-cover object-center" alt="Singapore">
+                    <div class="absolute right-3 top-3 bg-white text-xs px-2 py-1 rounded-md font-semibold">20% OFF
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold">Marina Bay Sands</h1>
+                    <div class="mt-1 flex items-center gap-1">
+                        <img src="/src/assets/icons/map-pin.svg" class="size-4" alt="Map pin">
+                        <p class="text-xs text-gray-500">10 Bayfront Avenue, Singapore</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/src/assets/images/jakarta.jpg" class="w-full h-56 rounded-lg object-cover object-center"
+                        alt="Jakarta">
+                    <div class="absolute right-3 top-3 bg-white text-xs px-2 py-1 rounded-md font-semibold">10% OFF
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold">Monas</h1>
+                    <div class="mt-1 flex items-center gap-1">
+                        <img src="/src/assets/icons/map-pin.svg" class="size-4" alt="Map pin">
+                        <p class="text-xs text-gray-500">Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/src/assets/images/laos.jpg" class="w-full h-56 rounded-lg object-cover object-center"
+                        alt="Laos">
+                    <div class="absolute right-3 top-3 bg-white text-xs px-2 py-1 rounded-md font-semibold">25% OFF
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold">Budha Park</h1>
+                    <div class="mt-1 flex items-center gap-1">
+                        <img src="/src/assets/icons/map-pin.svg" class="size-4" alt="Map pin">
+                        <p class="text-xs text-gray-500">Xieng Khuang, Laos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white rounded-lg overflow-hidden">
+                <div class="relative">
+                    <img src="/src/assets/images/thailand.jpg" class="w-full h-56 rounded-lg object-cover object-center"
+                        alt="Malaysia">
+                    <div class="absolute right-3 top-3 bg-white text-xs px-2 py-1 rounded-md font-semibold">40% OFF
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold">Maya Bay</h1>
+                    <div class="mt-1 flex items-center gap-1">
+                        <img src="/src/assets/icons/map-pin.svg" class="size-4" alt="Map pin">
+                        <p class="text-xs text-gray-500">Phi Phi Island, Thailand</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section></section>
+    <section class="container min-h-[120vh] mt-20" id="">
+        <div class="text-center">
+            <h1 class="font-semibold text-3xl">Travel to make sweet memories</h1>
+            <p class="mt-1 text-sm text-gray-500">Find trips that fit a flexible lifestyle</p>
+        </div>
+        <div class="flex flex-col md:flex-row-reverse justify-between items-start md:items-center gap-5 mt-10">
+            <div class="bg-gray-200 h-[80vh] w-full md:w-80 rounded-lg"></div>
+            <div class="flex flex-col gap-5">
+                <div class="flex flex-col items-start gap-y-3 max-w-md">
+                    <div class="bg-sky-300 rounded-md px-3 py-1 text-xs text-white">01</div>
+                    <h3 class="font-medium text-lg">Find trips that fit your freedom</h3>
+                    <p class="text-sm text-gray-500">Travelling affers freedom and flexibility, salitude and
+                        spontaneity,
+                        and privacy and
+                        purpose.</p>
+                </div>
+                <div class="flex flex-col items-start gap-y-3 max-w-md">
+                    <div class="bg-sky-300 rounded-md px-3 py-1 text-xs text-white">01</div>
+                    <h3 class="font-medium text-lg">Find trips that fit your freedom</h3>
+                    <p class="text-sm text-gray-500">Travelling affers freedom and flexibility, salitude and
+                        spontaneity,
+                        and privacy and
+                        purpose.</p>
+                </div>
+                <div class="flex flex-col items-start gap-y-3 max-w-md">
+                    <div class="bg-sky-300 rounded-md px-3 py-1 text-xs text-white">01</div>
+                    <h3 class="font-medium text-lg">Find trips that fit your freedom</h3>
+                    <p class="text-sm text-gray-500">Travelling affers freedom and flexibility, salitude and
+                        spontaneity,
+                        and privacy and
+                        purpose.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <script src="src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="/src/js/filter.js"></script>
+    <script src="/src/js/sidebar.js"></script>
+    <script type="module" src="/src/js/flatpickr_config.js"></script>
 </body>
 
 </html>

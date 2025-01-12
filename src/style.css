@@ -10,7 +10,7 @@
 
 @layer components {
   .transition-smooth {
-    @apply duration-150 transition-all ease-in-out;
+    @apply duration-300 transition-all ease-in-out;
   }
 
   .button-primary {
