@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth
+  }
+
   body {
-    @apply scroll-smooth font-poppins bg-white text-neutral-900;
+    @apply font-poppins bg-white text-neutral-900;
   }
 }
 

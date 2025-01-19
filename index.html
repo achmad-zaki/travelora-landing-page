@@ -25,7 +25,7 @@
             </button>
             <!-- Menu -->
             <div class="flex flex-col items-center gap-y-8 flex-grow justify-center">
-                <a href="#" class="text-xl">Home</a>
+                <a href="#home" class="text-xl">Home</a>
                 <a href="#" class="text-xl text-neutral-500 hover:text-neutral-900 transition-smooth">Ticket</a>
                 <a href="#" class="text-xl text-neutral-500 hover:text-neutral-900 transition-smooth">Explore</a>
                 <a href="#" class="text-xl text-neutral-500 hover:text-neutral-900 transition-smooth">Activity</a>
@@ -252,7 +252,7 @@
         </div>
     </section>
 
-    <section class="container min-h-[150vh] mt-20">
+    <section class="container mt-20">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-3">
             <div class="text-center lg:text-start">
                 <h1 class="text-3xl font-semibold">Explore more</h1>
@@ -413,10 +413,68 @@
             more</button>
     </section>
 
+    <section class="container mt-20">
+        <div class="flex flex-col md:flex-row items-center gap-y-3 justify-between">
+            <h1 class="font-semibold text-lg md:text-3xl">Book tickets and go now!</h1>
+            <button class="button-primary w-full md:w-auto">Book now</button>
+        </div>
+        <div id="cover_video" class="relative mt-8">
+            <img src="/src/assets/images/video_cover.jpg" class="h-96 w-full object-cover object-center rounded-xl"
+                alt="Bali">
+            <div class="absolute z-30 inset-y-0 inset-x-0 flex items-center justify-center">
+                <button id="play_button" class="border-2 border-gray-400 bg-black/50 p-2 rounded-full">
+                    <img src="/src/assets/icons/play.svg" class="size-11" alt="Icon">
+                </button>
+            </div>
+        </div>
+        <video id="video_player" class="hidden w-full object-cover rounded-xl mt-8">
+            <source src="/src/assets/video/bali_cinematic.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video tag.
+        </video>
+    </section>
+
+    <footer class="container mt-24 py-5">
+        <div class="w-full h-[1px] rounded-md bg-gray-300"></div>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-12 gap-y-5">
+            <div class="col-span-1 md:col-span-3">
+                <div class="flex items-center">
+                    <img src="/src/assets/logo/logo.svg" class="size-6" alt="Logo">
+                    <a href="#" class="text-sm font-medium ml-2 text-primary-500">Travelora</a>
+                </div>
+                <p class="text-xs mt-2 text-gray-600 max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto
+                    voluptatum
+                    facilis eum..</p>
+            </div>
+            <ul class="space-y-3 col-span-1 md:col-span-3 md:place-self-end">
+                <li class="text-lg font-medium">About</li>
+                <li class="text-gray-500 text-sm">About Us</li>
+                <li class="text-gray-500 text-sm">Features</li>
+                <li class="text-gray-500 text-sm">News</li>
+                <li class="text-gray-500 text-sm">Plans</li>
+            </ul>
+            <ul class="space-y-3 col-span-1 md:col-span-3 md:place-self-end">
+                <li class="text-lg font-medium">Company</li>
+                <li class="text-gray-500 text-sm">Why Travelora</li>
+                <li class="text-gray-500 text-sm">Partner with us</li>
+                <li class="text-gray-500 text-sm">FAQ</li>
+                <li class="text-gray-500 text-sm">Blog</li>
+            </ul>
+            <ul class="space-y-3 col-span-1 md:col-span-3 md:place-self-end">
+                <li class="text-lg font-medium">Support</li>
+                <li class="text-gray-500 text-sm">Account</li>
+                <li class="text-gray-500 text-sm">Support center</li>
+                <li class="text-gray-500 text-sm">Feedback</li>
+                <li class="text-gray-500 text-sm">Contact us</li>
+            </ul>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="/src/js/filter.js"></script>
     <script src="/src/js/sidebar.js"></script>
+    <script src="/src/js/play_video.js"></script>
     <script type="module" src="/src/js/flatpickr_config.js"></script>
 </body>
 
